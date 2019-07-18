@@ -1,0 +1,59 @@
+<h1 class="text-center text-dark py-5"> Lista de Formularios </h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1 class="text-center"> Falsos </h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Description</th>
+            <th scope="col">Completed</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <% @todos.each do |todo| %>
+           <% if todo.completed == false %>
+            <tr>
+              <td><%=todo.id%></td>
+              <td><%=todo.description%></td>
+              <td><%=todo.completed%></td>
+            </tr>
+            
+            <% end %>
+          <% end %>
+
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-6">
+      <h1 class="text-center"> Verdaderos </h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Description</th>
+            <th scope="col">Completed</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <% @todos.each do |todo| %>
+           <% if todo.completed == true %>
+            <tr>
+              <td><%=todo.id%></td>
+              <td><%=todo.description%></td>
+              <td><%=todo.completed%></td>
+            </tr>
+            
+            <% end %>
+            
+          <% end %>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

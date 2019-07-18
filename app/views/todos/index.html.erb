@@ -9,6 +9,8 @@
       <th scope="col">Completed</th>
       <th scope="col">Mostrar</th>
       <th scope="col">Edit</th>
+      <th scope="col">Eliminar</th>
+      <th scope="col">Completado</th>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +21,8 @@
             <td><%=todo.completed%></td>
             <td><%= link_to 'Mostrar', todo_path(todo) %></td>
             <td><%= link_to 'Edit', edit_path(todo) %></td>
+            <td><%= link_to 'Delete', delete_path(todo), method: :delete %></td>
+             <td><%= link_to 'Completado', complete_path(todo) %></td>
         </tr>
     <% end %>
        
