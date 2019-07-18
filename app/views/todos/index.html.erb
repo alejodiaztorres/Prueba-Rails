@@ -1,0 +1,30 @@
+<h1 class="text-center"> Todos los datos </h1>
+
+<div class="container">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">Description</th>
+      <th scope="col">Completed</th>
+      <th scope="col">Mostrar</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @todos.each do |todo| %>
+        <tr>
+            <td><%=todo.id%></td>
+            <td><%=todo.description%></td>
+            <td><%=todo.completed%></td>
+            <td><%= link_to 'Mostrar', todo_path(todo) %></td>
+            <td><%= link_to 'Edit', edit_path(todo) %></td>
+        </tr>
+    <% end %>
+       
+
+    </tbody>
+ </table>
+ </table>
+  <button type="button" class="btn btn-dark"> <%= link_to 'Crear', todos_new_path%> </button>
+ </div>

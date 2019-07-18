@@ -1,0 +1,25 @@
+<h1 class="text-center"> Todos los datos </h1>
+
+<div class="container">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">Description</th>
+      <th scope="col">Completed</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+            <td><%=@todo.id%></td>
+            <td><%=@todo.description%></td>
+            <% if @todo.completed == true%>
+                <td><%=@todo.completed = "si"%></td>
+            <% else %>
+                <td><%=@todo.completed = "no"%></td>
+            <% end %>
+        </tr>
+    </tbody>
+ </table>
+ </table>
+ </div>

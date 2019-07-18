@@ -1,0 +1,14 @@
+
+<h1> Formulario </h1>
+<%= form_with  model: @todo, local: true do |f| %>
+
+
+  <%= f.label :description, "Descripción"%>
+  <%= f.text_field :description %>
+  </br>
+  <%= f.label :completed, "Completed"%>
+  <%= f.text_field :completed %>
+
+  </br>
+  <%= f.submit "Enviar" %>
+<% end %>

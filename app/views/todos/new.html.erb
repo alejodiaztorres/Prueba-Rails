@@ -1,0 +1,13 @@
+<div class="container">
+<h1> Formulario </h1>
+<%= form_with  model: @todo, class:'form', local: true do |f| %>
+    <div class="form-group">
+  <%= f.label :description, "Descripción"%>
+  <%= f.text_field :description %>
+  </br>
+  <%= f.label :completed, "Completed"%>
+  <%= f.text_field :completed %>
+  </div>
+  <%= f.submit "Enviar" %>
+<% end %>
+<div class="container">
